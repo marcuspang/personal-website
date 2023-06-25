@@ -36,5 +36,9 @@
 		"vite": "^4.3.6",
 		"vitest": "^0.25.3"
 	},
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"@auth/core": "^0.8.4",
+		"@auth/sveltekit": "^0.3.3"
+	}
 }
