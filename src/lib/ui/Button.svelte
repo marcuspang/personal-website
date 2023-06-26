@@ -31,6 +31,6 @@
 	export let size: $$Props['size'] = 'default';
 </script>
 
-<button {...$$props} class={cn(buttonVariants({ variant, size, class: $$props.class }))}>
+<button {...$$props} on:click class={cn(buttonVariants({ variant, size, class: $$props.class }))}>
 	<slot />
 </button>

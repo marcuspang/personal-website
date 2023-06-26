@@ -1,112 +1,35 @@
-<script>
+<script lang="ts">
+	import { goto } from '$app/navigation';
 	import { page } from '$app/stores';
+	import Avatar from './ui/Avatar.svelte';
+	import AvatarFallback from './ui/AvatarFallback.svelte';
+	import AvatarImage from './ui/AvatarImage.svelte';
+	import Button from './ui/Button.svelte';
+
+	console.log($page.data);
 </script>
 
-<header>
-	<div class="signedInStatus">
-		<p class="nojs-show loaded">
+<header class="bg-transparent">
+	<div class="flex gap-6 md:gap-10 justify-between max-w-lg mx-auto">
+		<a href="/" class="flex items-center">
+			<span class="font-bold">Home</span>
+		</a>
+		<div class="flex space-x-2">
 			{#if $page.data.session}
 				{#if $page.data.session.user?.image}
-					<span style="background-image: url('{$page.data.session.user.image}')" class="avatar" />
+					<Avatar>
+						<AvatarImage
+							src={$page.data.session.user.image}
+							alt={$page.data.session.user?.email ?? $page.data.session.user?.name}
+						/>
+						<AvatarFallback>Profile</AvatarFallback>
+					</Avatar>
 				{/if}
-				<span class="signedInText">
-					<small>Signed in as</small><br />
-					<strong>{$page.data.session.user?.email ?? $page.data.session.user?.name}</strong>
-				</span>
-				<a href="/auth/signout" class="button" data-sveltekit-preload-data="off">Sign out</a>
+				<Button on:click={() => goto('/auth/signout')}>Sign Out</Button>
 			{:else}
 				<span class="notSignedInText">You are not signed in</span>
-				<a href="/auth/signin" class="buttonPrimary" data-sveltekit-preload-data="off">Sign in</a>
+				<Button on:click={() => goto('/auth/signin')}>Sign In</Button>
 			{/if}
-		</p>
+		</div>
 	</div>
-	<nav>
-		<ul class="navItems">
-			<li class="navItem"><a href="/">Home</a></li>
-			<li class="navItem"><a href="/protected">Protected</a></li>
-		</ul>
-	</nav>
 </header>
-
-<style>
-	.nojs-show {
-		opacity: 1;
-		top: 0;
-	}
-	.signedInStatus {
-		display: block;
-		min-height: 4rem;
-		width: 100%;
-	}
-	.loaded {
-		position: relative;
-		top: 0;
-		opacity: 1;
-		overflow: hidden;
-		border-radius: 0 0 0.6rem 0.6rem;
-		padding: 0.6rem 1rem;
-		margin: 0;
-		background-color: rgba(0, 0, 0, 0.05);
-		transition: all 0.2s ease-in;
-	}
-	.signedInText,
-	.notSignedInText {
-		position: absolute;
-		padding-top: 0.8rem;
-		left: 1rem;
-		right: 6.5rem;
-		white-space: nowrap;
-		text-overflow: ellipsis;
-		overflow: hidden;
-		display: inherit;
-		z-index: 1;
-		line-height: 1.3rem;
-	}
-	.signedInText {
-		padding-top: 0rem;
-		left: 4.6rem;
-	}
-	.avatar {
-		border-radius: 2rem;
-		float: left;
-		height: 2.8rem;
-		width: 2.8rem;
-		background-color: white;
-		background-size: cover;
-		background-repeat: no-repeat;
-	}
-	.button,
-	.buttonPrimary {
-		float: right;
-		margin-right: -0.4rem;
-		font-weight: 500;
-		border-radius: 0.3rem;
-		cursor: pointer;
-		font-size: 1rem;
-		line-height: 1.4rem;
-		padding: 0.7rem 0.8rem;
-		position: relative;
-		z-index: 10;
-		background-color: transparent;
-		color: #555;
-	}
-	.buttonPrimary {
-		background-color: #346df1;
-		border-color: #346df1;
-		color: #fff;
-		text-decoration: none;
-		padding: 0.7rem 1.4rem;
-	}
-	.buttonPrimary:hover {
-		box-shadow: inset 0 0 5rem rgba(0, 0, 0, 0.2);
-	}
-	.navItems {
-		margin-bottom: 2rem;
-		padding: 0;
-		list-style: none;
-	}
-	.navItem {
-		display: inline-block;
-		margin-right: 1rem;
-	}
-</style>

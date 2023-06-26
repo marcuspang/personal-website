@@ -3,7 +3,7 @@
 	import './styles.css';
 </script>
 
-<main>
+<main >
 	<Header />
 	<slot />
 </main>
