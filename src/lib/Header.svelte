@@ -1,20 +1,20 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
 	import { page } from '$app/stores';
-	import Avatar from './ui/Avatar.svelte';
-	import AvatarFallback from './ui/AvatarFallback.svelte';
-	import AvatarImage from './ui/AvatarImage.svelte';
-	import Button from './ui/Button.svelte';
+	import ThemeToggle from './ThemeToggle.svelte';
+	import { Avatar, AvatarFallback, AvatarImage } from './ui/Avatar';
+	import { Button } from './ui/Button';
 
 	console.log($page.data);
 </script>
 
 <header class="bg-transparent">
-	<div class="flex gap-6 md:gap-10 justify-between max-w-lg mx-auto">
+	<div class="flex justify-between max-w-xl mx-auto py-2">
 		<a href="/" class="flex items-center">
 			<span class="font-bold">Home</span>
 		</a>
 		<div class="flex space-x-2">
+			<ThemeToggle />
 			{#if $page.data.session}
 				{#if $page.data.session.user?.image}
 					<Avatar>
