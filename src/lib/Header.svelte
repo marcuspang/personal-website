@@ -27,7 +27,6 @@
 				{/if}
 				<Button on:click={() => goto('/auth/signout')}>Sign Out</Button>
 			{:else}
-				<span class="notSignedInText">You are not signed in</span>
 				<Button on:click={() => goto('/auth/signin')}>Sign In</Button>
 			{/if}
 		</div>
