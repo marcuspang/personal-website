@@ -1,17 +1,29 @@
 <script lang="ts">
 	import { ExternalLinkIcon } from 'lucide-svelte';
 
-	const links: { platform: string; title: string; href: string }[] = [
-		{ platform: 'Github', title: 'marcuspang', href: 'https://github.com/marcuspang' },
+	const links: { platform: string; title: string; href: string; isExternal?: boolean }[] = [
+		{
+			platform: 'Github',
+			title: 'marcuspang',
+			href: 'https://github.com/marcuspang',
+			isExternal: true
+		},
 		{
 			platform: 'ENS',
 			title: 'marcuspang.eth',
-			href: 'https://etherscan.io/address/0x7730B4Cdc1B1E7a33A309AB7205411faD009C106'
+			href: 'https://etherscan.io/address/0x7730B4Cdc1B1E7a33A309AB7205411faD009C106',
+			isExternal: true
 		},
 		{
 			platform: 'LinkedIn',
-			title: 'marcuspangyuyang',
-			href: 'https://linkedin.com/in/marcus-pang-yu-yang'
+			title: 'marcus-pang-yu-yang',
+			href: 'https://linkedin.com/in/marcus-pang-yu-yang',
+			isExternal: true
+		},
+		{
+			platform: 'Email',
+			title: 'marcuspangyuyang@gmail.com',
+			href: 'mailto:marcuspangyuyang@gmail.com'
 		}
 	];
 </script>
@@ -47,15 +59,24 @@
 		{#each links as link}
 			<div class="col-span-1 text-muted-foreground">{link.platform}</div>
 			<div class="col-span-2 text-secondary-foreground">
-				<a
-					href={link.href}
-					target="_blank"
-					rel="noopener"
-					class="dark:hover:text-slate-200 dark:text-slate-300 hover:text-slate-500 text-slate-600 transition-colors"
-				>
-					{link.title}
-					<ExternalLinkIcon class="h-4 w-4 mb-0.5 inline" />
-				</a>
+				{#if link.isExternal}
+					<a
+						href={link.href}
+						target="_blank"
+						rel="noopener"
+						class="dark:hover:text-slate-200 dark:text-slate-300 hover:text-slate-500 text-slate-600 transition-colors"
+					>
+						{link.title}
+						<ExternalLinkIcon class="h-4 w-4 mb-0.5 inline" />
+					</a>
+				{:else}
+					<a
+						href={link.href}
+						class="dark:hover:text-slate-200 dark:text-slate-300 hover:text-slate-500 text-slate-600 transition-colors"
+					>
+						{link.title}
+					</a>
+				{/if}
 			</div>
 		{/each}
 	</div>
