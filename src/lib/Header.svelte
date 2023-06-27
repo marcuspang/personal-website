@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
 	import { page } from '$app/stores';
+	import Logo from './Logo.svelte';
 	import ThemeToggle from './ThemeToggle.svelte';
 	import { Avatar, AvatarFallback, AvatarImage } from './ui/Avatar';
 	import { Button } from './ui/Button';
@@ -11,7 +12,7 @@
 <header class="bg-transparent">
 	<div class="flex justify-between max-w-xl mx-auto py-2">
 		<a href="/" class="flex items-center">
-			<span class="font-bold">Home</span>
+			<Logo class="fill-white w-10 h-10"/>
 		</a>
 		<div class="flex space-x-2">
 			<ThemeToggle />
