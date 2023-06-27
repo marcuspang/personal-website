@@ -1,27 +1,13 @@
 <script lang="ts">
 	import { Moon, Sun } from 'lucide-svelte';
 	import { Button } from './ui/Button';
-	import { browser } from '$app/environment';
 
-	let darkMode = true;
-
-	if (browser) {
-		if (
-			localStorage.theme === 'dark' ||
-			(!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
-		) {
-			document.documentElement.classList.add('dark');
-			darkMode = true;
-		} else {
-			document.documentElement.classList.remove('dark');
-			darkMode = false;
-		}
-	}
+	export let isDarkMode = true;
 
 	function handleSwitchDarkMode() {
-		darkMode = !darkMode;
+		isDarkMode = !isDarkMode;
 
-		if (darkMode) {
+		if (isDarkMode) {
 			document.documentElement.classList.add('dark');
 		} else {
 			document.documentElement.classList.remove('dark');
