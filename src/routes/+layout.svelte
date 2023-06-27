@@ -3,7 +3,7 @@
 	import './styles.css';
 </script>
 
-<main >
+<main class="max-w-xl mx-auto">
 	<Header />
 	<slot />
 </main>

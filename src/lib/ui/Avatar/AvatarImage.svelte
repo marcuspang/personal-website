@@ -3,6 +3,4 @@
 	import { Avatar as AvatarPrimitive } from 'radix-svelte';
 </script>
 
-<AvatarPrimitive.Image {...$$props} class={cn('aspect-square h-full w-full', $$props.class)}>
-	<slot />
-</AvatarPrimitive.Image>
+<AvatarPrimitive.Image {...$$props} class={cn('aspect-square h-full w-full', $$props.class)} />

@@ -21,6 +21,7 @@
 						<AvatarImage
 							src={$page.data.session.user.image}
 							alt={$page.data.session.user?.email ?? $page.data.session.user?.name}
+							class="hover:opacity-80 transition-opacity"
 						/>
 						<AvatarFallback>Profile</AvatarFallback>
 					</Avatar>
