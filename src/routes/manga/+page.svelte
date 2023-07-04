@@ -3,9 +3,10 @@
 </script>
 
 {#if $page.data.session}
-	<h1>Protected page</h1>
-	<p>This is a protected content. You can access this content because you are signed in.</p>
-	<p>Session expiry: {$page.data.session?.expires}</p>
+	<section class="py-8">
+		<h1 class="tracking-tight text-primary font-semibold text-2xl pb-1">Manga Tracker</h1>
+		
+	</section>
 {:else}
 	<h1>Access Denied</h1>
 	<p>

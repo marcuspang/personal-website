@@ -23,7 +23,7 @@
 	}
 </script>
 
-<header class="bg-transparent">
+<header class="bg-transparent mb-4">
 	<div class="flex justify-between max-w-xl mx-auto py-2">
 		<a href="/" class="flex items-center">
 			<Logo class="w-10 h-10 hover:opacity-80 transition-opacity" bind:isDarkMode />
@@ -41,9 +41,9 @@
 						<AvatarFallback>PFP</AvatarFallback>
 					</Avatar>
 				{/if}
-				<Button on:click={() => goto('/auth/signout')}>Sign Out</Button>
+				<Button on:click={() => goto('/auth/signout')} variant="ghost">Sign Out</Button>
 			{:else}
-				<Button on:click={() => goto('/auth/signin')}>Sign In</Button>
+				<Button on:click={() => goto('/auth/signin')} variant="ghost">Sign In</Button>
 			{/if}
 		</div>
 	</div>
