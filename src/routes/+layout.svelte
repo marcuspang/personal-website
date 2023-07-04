@@ -5,7 +5,7 @@
 </script>
 
 <Analytics />
-<main class="max-w-xl mx-auto">
+<main class="max-w-xl mx-auto px-4">
 	<Header />
 	<slot />
 </main>

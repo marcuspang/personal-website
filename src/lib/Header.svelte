@@ -41,9 +41,9 @@
 						<AvatarFallback>PFP</AvatarFallback>
 					</Avatar>
 				{/if}
-				<Button on:click={() => goto('/auth/signout')} variant="ghost">Sign Out</Button>
+				<Button on:click={() => goto('/auth/signout')} variant="outline">Sign Out</Button>
 			{:else}
-				<Button on:click={() => goto('/auth/signin')} variant="ghost">Sign In</Button>
+				<Button on:click={() => goto('/auth/signin')} variant="outline">Sign In</Button>
 			{/if}
 		</div>
 	</div>
