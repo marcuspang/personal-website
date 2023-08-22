@@ -17,18 +17,18 @@
 	<defs>
 		<linearGradient id="linear-gradient" x1="0" y1="0" x2="100%" y2="0">
 			{#if isDarkMode}
-				<stop offset="0%" stop-color="rgb(199, 210, 254)">
+				<stop offset="0%" stop-color="rgb(128, 138, 159)">
 					<animate
 						attributeName="stop-color"
-						values="rgb(199, 210, 254); rgb(254, 202, 202); rgb(254, 249, 195); rgb(254, 202, 202); rgb(199, 210, 254);"
+						values="rgb(128, 138, 159); rgb(44, 73, 127); rgb(61, 43, 86); rgb(44, 73, 127); rgb(128, 138, 159);"
 						dur="5s"
 						repeatCount="indefinite"
 					/>
 				</stop>
-				<stop offset="100%" stop-color="rgb(254, 249, 195)">
+				<stop offset="100%" stop-color="rgb(61, 43, 86)">
 					<animate
 						attributeName="stop-color"
-						values="rgb(254, 249, 195); rgb(254, 202, 202); rgb(199, 210, 254); rgb(254, 202, 202); rgb(254, 249, 195);"
+						values="rgb(61, 43, 86); rgb(44, 73, 127); rgb(128, 138, 159); rgb(44, 73, 127); rgb(61, 43, 86);"
 						dur="5s"
 						repeatCount="indefinite"
 					/>
