@@ -36,7 +36,7 @@
 						{#if hackathon.websiteLink !== undefined}
 							<a href={hackathon.githubLink} target="_blank" rel="noopener" class="">
 								<GlobeIcon
-									class="text-foreground stroke-[1.5px] hover:bg-gray-200 p-2 rounded-lg transition-colors"
+									class="text-foreground stroke-[1.5px] hover:bg-gray-200 dark:hover:bg-gray-800 p-2 rounded-lg transition-colors"
 									size={36}
 								/>
 							</a>
@@ -44,7 +44,7 @@
 						{#if hackathon.githubLink !== undefined}
 							<a href={hackathon.githubLink} target="_blank" rel="noopener" class="">
 								<GithubIcon
-									class="text-foreground stroke-[1.5px] hover:bg-gray-200 p-2 rounded-lg transition-colors"
+									class="text-foreground stroke-[1.5px] hover:bg-gray-200 dark:hover:bg-gray-800 p-2 rounded-lg transition-colors"
 									size={36}
 								/>
 							</a>
