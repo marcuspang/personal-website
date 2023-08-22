@@ -30,7 +30,7 @@
 		</a>
 		<div class="flex space-x-2">
 			<ThemeToggle bind:isDarkMode />
-			{#if $page.data.session}
+			<!-- {#if $page.data.session}
 				{#if $page.data.session.user?.image}
 					<Avatar>
 						<AvatarImage
@@ -44,7 +44,7 @@
 				<Button on:click={() => goto('/auth/signout')} variant="outline">Sign Out</Button>
 			{:else}
 				<Button on:click={() => goto('/auth/signin')} variant="outline">Sign In</Button>
-			{/if}
+			{/if} -->
 		</div>
 	</div>
 </header>
