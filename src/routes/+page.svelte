@@ -1,31 +1,7 @@
 <script lang="ts">
-	import { ExternalLinkIcon } from 'lucide-svelte';
-
-	const links: { platform: string; title: string; href: string; isExternal?: boolean }[] = [
-		{
-			platform: 'Github',
-			title: 'marcuspang',
-			href: 'https://github.com/marcuspang',
-			isExternal: true
-		},
-		{
-			platform: 'ENS',
-			title: 'marcuspang.eth',
-			href: 'https://etherscan.io/address/0x7730B4Cdc1B1E7a33A309AB7205411faD009C106',
-			isExternal: true
-		},
-		{
-			platform: 'LinkedIn',
-			title: 'marcus-pang-yu-yang',
-			href: 'https://linkedin.com/in/marcus-pang-yu-yang',
-			isExternal: true
-		},
-		{
-			platform: 'Email',
-			title: 'marcuspangyuyang@gmail.com',
-			href: 'mailto:marcuspangyuyang@gmail.com'
-		}
-	];
+	import { ExternalLinkIcon, GithubIcon, GlobeIcon } from 'lucide-svelte';
+	import { links } from '../constants/links';
+	import { hackathons } from '../constants/hackathons';
 </script>
 
 <svelte:head>
@@ -38,14 +14,52 @@
 	<p class="text-muted-foreground text-lg pb-1">Full-stack + Smart Contract Developer</p>
 </section>
 <section class="py-8">
-	<h2 class="font-semibold text-lg text-primary pb-2">About Me</h2>
+	<h2 class="font-semibold text-lg text-primary pb-2" id="about-me">About Me</h2>
 	<p class="text-secondary-foreground dark:text-slate-300">
-		I enjoy building websites and applications. Most of my hours are spent on hackathons and personal projects, centered
-		around web3 mainly. Always building something.
+		I enjoy building websites and applications. Most of my hours are spent on hackathons and
+		personal projects, centered around web3 mainly. Always building something.
 	</p>
 </section>
 <section class="py-8">
-	<h2 class="font-semibold text-lg text-primary pb-2">Links</h2>
+	<h2 class="font-semibold text-lg text-primary pb-2" id="past-hackathons">Past Hackathons</h2>
+	<div class="grid-cols-1 space-y-4">
+		{#each hackathons as hackathon}
+			<div class="bg-slate-50 py-6 px-8 rounded-lg shadow">
+				<div class="flex justify-between">
+					<div>
+						<h4>
+							{hackathon.projectTitle}
+						</h4>
+						<p class="text-sm text-muted-foreground">built for {hackathon.hackathonTitle}</p>
+					</div>
+					<div class="flex">
+						{#if hackathon.websiteLink !== undefined}
+							<a href={hackathon.githubLink} target="_blank" rel="noopener" class="">
+								<GlobeIcon
+									class="text-foreground stroke-[1.5px] hover:bg-gray-200 p-2 rounded-lg transition-colors"
+									size={36}
+								/>
+							</a>
+						{/if}
+						{#if hackathon.githubLink !== undefined}
+							<a href={hackathon.githubLink} target="_blank" rel="noopener" class="">
+								<GithubIcon
+									class="text-foreground stroke-[1.5px] hover:bg-gray-200 p-2 rounded-lg transition-colors"
+									size={36}
+								/>
+							</a>
+						{/if}
+					</div>
+				</div>
+				{#if hackathon.description !== undefined}
+					<p>{hackathon.description}</p>
+				{/if}
+			</div>
+		{/each}
+	</div>
+</section>
+<section class="py-8">
+	<h2 class="font-semibold text-lg text-primary pb-2" id="links">Links</h2>
 	<div class="grid grid-cols-3 gap-y-4">
 		{#each links as link}
 			<div class="col-span-1 text-muted-foreground">{link.platform}</div>
