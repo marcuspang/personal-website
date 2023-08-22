@@ -3,6 +3,11 @@ import type { Hackathon } from '../types';
 // Chronological descending order
 export const hackathons: Hackathon[] = [
 	{
+		projectTitle: 'Zap',
+		hackathonTitle: 'ETH Munich 2023',
+		githubLink: 'https://github.com/marcuspang/we-wallet'
+	},
+	{
 		projectTitle: 'Programmatic NFTs',
 		hackathonTitle: 'Web3 Gaming Week 2023',
 		githubLink: 'https://github.com/marcuspang/programmatic-nfts',
