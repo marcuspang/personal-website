@@ -35,12 +35,12 @@
 
 <section class="py-8">
 	<h1 class="tracking-tight text-primary font-semibold text-2xl pb-1">Marcus Pang</h1>
-	<p class="text-muted-foreground text-lg pb-1">Fullstack / Smart Contract Developer</p>
+	<p class="text-muted-foreground text-lg pb-1">Full-stack + Smart Contract Developer</p>
 </section>
 <section class="py-8">
 	<h2 class="font-semibold text-lg text-primary pb-2">About Me</h2>
 	<p class="text-secondary-foreground dark:text-slate-300">
-		I enjoy building websites and applications. Most of my hours are spent on hackathons, centered
+		I enjoy building websites and applications. Most of my hours are spent on hackathons and personal projects, centered
 		around web3 mainly. Always building something.
 	</p>
 </section>
