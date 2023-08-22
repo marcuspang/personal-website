@@ -24,7 +24,7 @@
 	<h2 class="font-semibold text-lg text-primary pb-2" id="past-hackathons">Past Hackathons</h2>
 	<div class="grid-cols-1 space-y-4">
 		{#each hackathons as hackathon}
-			<div class="bg-slate-50 py-6 px-8 rounded-lg shadow">
+			<div class="bg-slate-50 dark:bg-slate-900 py-6 px-8 rounded-lg shadow">
 				<div class="flex justify-between">
 					<div>
 						<h4>
