@@ -16,8 +16,8 @@
 <section class="py-8">
 	<h2 class="font-semibold text-lg text-primary pb-2" id="about-me">About Me</h2>
 	<p class="text-secondary-foreground dark:text-slate-300">
-		I enjoy building websites and applications. Most of my hours are spent on hackathons and
-		personal projects, centered around web3 mainly. Always building something.
+		I enjoy building websites and applications. Most of my hours are spent on hackathons, usually
+		web3. Always building something.
 	</p>
 </section>
 <section class="py-8">
