@@ -1,6 +1,7 @@
 <script lang="ts">
+	import Hackathon from '$lib/Hackathon.svelte';
 	import { Carousel } from '$lib/ui/Carousel';
 	import { hackathons } from '../constants/hackathons';
 </script>
 
-<Carousel items={hackathons} />
+<Carousel component={Hackathon} componentProps={hackathons} />

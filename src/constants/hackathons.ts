@@ -3,6 +3,33 @@ import type { Hackathon } from '../types';
 // Chronological descending order
 export const hackathons: Hackathon[] = [
 	{
+		projectTitle: 'k3ys',
+		hackathonTitle: 'ETH Istanbul 2023',
+		githubLink: 'https://github.com/keys-connect/app',
+		websiteLink: 'https://k3ys.xyz',
+		description: 'Won several pool prizes'
+	},
+	{
+		projectTitle: 'Reco',
+		hackathonTitle: 'ETH London 2023',
+		githubLink: 'https://github.com/recommendoor/reco',
+		websiteLink: 'https://reco-london.vercel.app',
+		description: 'Won a sponsor prize'
+	},
+	{
+		projectTitle: 'CredLancer',
+		hackathonTitle: 'ETH Rome 2023',
+		githubLink: 'https://github.com/CredLancer/CredLancer_ALL',
+		description: 'Won a sponsor prize'
+	},
+	{
+		projectTitle: 'DashDAO',
+		hackathonTitle: 'ETH Warsaw 2023',
+		githubLink: 'https://github.com/DashDAO/dao-dashboard',
+		websiteLink: 'https://dashdao.vercel.app',
+		description: 'Won 1st place'
+	},
+	{
 		projectTitle: 'Zap',
 		hackathonTitle: 'ETH Munich 2023',
 		githubLink: 'https://github.com/marcuspang/we-wallet'

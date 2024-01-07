@@ -1,20 +1,20 @@
-<script lang="ts">
-	import HackathonComponent from '$lib/Hackathon.svelte';
+<script lang="ts" generics="T extends SvelteComponent">
 	import { Button } from '$lib/ui/Button';
 	import type { EmblaCarouselConfig } from '$lib/ui/Carousel/types';
 	import { cn } from '$lib/utils';
 	import type { EmblaCarouselType } from 'embla-carousel';
 	import emblaCarouselSvelte from 'embla-carousel-svelte';
 	import { ArrowLeft, ArrowRight } from 'lucide-svelte';
-	import type { Hackathon } from '../../../types';
+	import type { ComponentProps, ComponentType, SvelteComponent } from 'svelte';
 
-	export let items: Hackathon[] = [];
-	export let config: EmblaCarouselConfig = { options: { loop: false, axis: 'x' }, plugins: [] };
+	export let componentProps: ComponentProps<T>[] = [];
+	export let component: ComponentType<T>;
+	export let config: EmblaCarouselConfig = { options: { loop: true, axis: 'x' }, plugins: [] };
 	export let carouselItemClass = '';
 	export let carouselItemsClass = '';
 
 	let api: EmblaCarouselType | undefined;
-	let canScrollNext = items.length > 0;
+	let canScrollNext = componentProps.length > 0;
 	let canScrollPrev = false;
 	let scrollNext = () => {};
 	let scrollPrev = () => {};
@@ -72,9 +72,9 @@
 <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
 <div
 	class="relative"
-	on:keydown|preventDefault={onKeyDown}
 	role="region"
 	aria-roledescription="carousel"
+	on:keydown|preventDefault={onKeyDown}
 >
 	<div class={'overflow-hidden'} use:emblaCarouselSvelte={config} on:emblaInit={onInit}>
 		<div
@@ -84,7 +84,7 @@
 				carouselItemsClass
 			)}
 		>
-			{#each items as item}
+			{#each componentProps as props}
 				<div
 					role="group"
 					aria-roledescription="slide"
@@ -94,7 +94,7 @@
 						carouselItemClass
 					)}
 				>
-					<svelte:component this={HackathonComponent} {...item} />
+					<svelte:component this={component} {...props} />
 				</div>
 			{/each}
 		</div>
@@ -127,7 +127,7 @@
 		<ArrowRight class="h-4 w-4" />
 		<span class="sr-only">Next slide</span>
 	</Button>
-	<div class="absolute left-1/2 -translate-x-1/2 text-center text-muted-foreground text-sm pt-2">
-		{currentCount} out of {items.length}
+	<div class="absolute left-1/2 -translate-x-1/2 text-center text-muted-foreground text-sm pt-4">
+		{currentCount} out of {componentProps.length}
 	</div>
 </div>
