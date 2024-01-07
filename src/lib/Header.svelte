@@ -1,11 +1,8 @@
 <script lang="ts">
 	import { browser } from '$app/environment';
-	import { goto } from '$app/navigation';
-	import { page } from '$app/stores';
+	import Logo from '$lib/Logo.svelte';
 	import { darkModeStore } from '$lib/store';
 	import ThemeToggle from './ThemeToggle.svelte';
-	import { Avatar, AvatarFallback, AvatarImage } from './ui/Avatar';
-	import { Button } from './ui/Button';
 
 	if (browser) {
 		if (

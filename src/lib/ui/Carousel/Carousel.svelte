@@ -1,19 +1,25 @@
 <script lang="ts">
+	import HackathonComponent from '$lib/Hackathon.svelte';
 	import { Button } from '$lib/ui/Button';
 	import type { EmblaCarouselConfig } from '$lib/ui/Carousel/types';
 	import { cn } from '$lib/utils';
 	import type { EmblaCarouselType } from 'embla-carousel';
 	import emblaCarouselSvelte from 'embla-carousel-svelte';
 	import { ArrowLeft, ArrowRight } from 'lucide-svelte';
+	import type { Hackathon } from '../../../types';
 
-	export let items: unknown[] = [];
+	export let items: Hackathon[] = [];
 	export let config: EmblaCarouselConfig = { options: { loop: false, axis: 'x' }, plugins: [] };
+	export let carouselItemClass = '';
+	export let carouselItemsClass = '';
 
 	let api: EmblaCarouselType | undefined;
 	let canScrollNext = items.length > 0;
 	let canScrollPrev = false;
 	let scrollNext = () => {};
 	let scrollPrev = () => {};
+
+	let currentCount = 0;
 
 	const onInit = (event: CustomEvent<EmblaCarouselType>) => {
 		api = event.detail;
@@ -38,6 +44,7 @@
 		}
 		canScrollPrev = api.canScrollPrev();
 		canScrollNext = api.canScrollNext();
+		currentCount = api.selectedScrollSnap() + 1;
 	};
 
 	const onNext = () => {
@@ -56,6 +63,8 @@
 			canScrollPrev = api.canScrollPrev();
 			scrollNext = api.scrollNext;
 			scrollPrev = api.scrollPrev;
+
+			currentCount = api.selectedScrollSnap() + 1;
 		}
 	}
 </script>
@@ -68,17 +77,24 @@
 	aria-roledescription="carousel"
 >
 	<div class={'overflow-hidden'} use:emblaCarouselSvelte={config} on:emblaInit={onInit}>
-		<div class={cn('flex', config?.options.axis === 'x' ? '-ml-4' : '-mt-4 flex-col')}>
+		<div
+			class={cn(
+				'flex',
+				config?.options.axis === 'x' ? '-ml-4' : '-mt-4 flex-col',
+				carouselItemsClass
+			)}
+		>
 			{#each items as item}
 				<div
 					role="group"
 					aria-roledescription="slide"
 					class={cn(
 						'min-w-0 shrink-0 grow-0 basis-full',
-						config?.options.axis === 'x' ? 'pl-4' : 'pt-4'
+						config?.options.axis === 'x' ? 'pl-4' : 'pt-4',
+						carouselItemClass
 					)}
 				>
-					{item}
+					<svelte:component this={HackathonComponent} {...item} />
 				</div>
 			{/each}
 		</div>
@@ -111,4 +127,7 @@
 		<ArrowRight class="h-4 w-4" />
 		<span class="sr-only">Next slide</span>
 	</Button>
+	<div class="absolute left-1/2 -translate-x-1/2 text-center text-muted-foreground text-sm pt-2">
+		{currentCount} out of {items.length}
+	</div>
 </div>
