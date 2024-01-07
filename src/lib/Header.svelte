@@ -1,13 +1,8 @@
 <script lang="ts">
 	import { browser } from '$app/environment';
-	import { goto } from '$app/navigation';
-	import { page } from '$app/stores';
-	import Logo from './Logo.svelte';
+	import Logo from '$lib/Logo.svelte';
+	import { darkModeStore } from '$lib/store';
 	import ThemeToggle from './ThemeToggle.svelte';
-	import { Avatar, AvatarFallback, AvatarImage } from './ui/Avatar';
-	import { Button } from './ui/Button';
-
-	let isDarkMode = true;
 
 	if (browser) {
 		if (
@@ -15,10 +10,10 @@
 			(!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
 		) {
 			document.documentElement.classList.add('dark');
-			isDarkMode = true;
+			darkModeStore.set(true);
 		} else {
 			document.documentElement.classList.remove('dark');
-			isDarkMode = false;
+			darkModeStore.set(false);
 		}
 	}
 </script>
@@ -26,10 +21,10 @@
 <header class="bg-transparent mb-4">
 	<div class="flex justify-between max-w-xl mx-auto py-2">
 		<a href="/" class="flex items-center">
-			<Logo class="w-10 h-10 hover:opacity-80 transition-opacity" bind:isDarkMode />
+			<Logo class="w-10 h-10 hover:opacity-80 transition-opacity" />
 		</a>
 		<div class="flex space-x-2">
-			<ThemeToggle bind:isDarkMode />
+			<ThemeToggle />
 			<!-- {#if $page.data.session}
 				{#if $page.data.session.user?.image}
 					<Avatar>

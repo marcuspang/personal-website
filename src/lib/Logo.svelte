@@ -1,5 +1,11 @@
 <script lang="ts">
-	export let isDarkMode = true;
+	import { darkModeStore } from '$lib/store';
+
+	let isDarkMode = true;
+
+	darkModeStore.subscribe((value) => {
+		isDarkMode = value;
+	});
 </script>
 
 <svg
@@ -17,18 +23,18 @@
 	<defs>
 		<linearGradient id="linear-gradient" x1="0" y1="0" x2="100%" y2="0">
 			{#if isDarkMode}
-				<stop offset="0%" stop-color="rgb(128, 138, 159)">
+				<stop offset="0%" stop-color="#03A89E">
 					<animate
 						attributeName="stop-color"
-						values="rgb(128, 138, 159); rgb(44, 73, 127); rgb(61, 43, 86); rgb(44, 73, 127); rgb(128, 138, 159);"
+						values="#03A89E; #72195A; #023C40; #72195A; #03A89E;"
 						dur="5s"
 						repeatCount="indefinite"
 					/>
 				</stop>
-				<stop offset="100%" stop-color="rgb(61, 43, 86)">
+				<stop offset="100%" stop-color="#72195A">
 					<animate
 						attributeName="stop-color"
-						values="rgb(61, 43, 86); rgb(44, 73, 127); rgb(128, 138, 159); rgb(44, 73, 127); rgb(61, 43, 86);"
+						values="#023C40; #72195A; #03A89E; #72195A; #023C40;"
 						dur="5s"
 						repeatCount="indefinite"
 					/>

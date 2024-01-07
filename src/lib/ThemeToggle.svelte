@@ -1,11 +1,16 @@
 <script lang="ts">
 	import { Moon, Sun } from 'lucide-svelte';
 	import { Button } from './ui/Button';
+	import { darkModeStore } from '$lib/store';
 
-	export let isDarkMode = true;
+	let isDarkMode = true;
+
+	darkModeStore.subscribe((value) => {
+		isDarkMode = value;
+	});
 
 	function handleSwitchDarkMode() {
-		isDarkMode = !isDarkMode;
+		darkModeStore.update((value) => !value);
 
 		if (isDarkMode) {
 			document.documentElement.classList.add('dark');
