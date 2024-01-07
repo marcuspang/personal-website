@@ -1,8 +1,6 @@
 <script lang="ts">
-	import { ExternalLinkIcon, GithubIcon, GlobeIcon } from 'lucide-svelte';
-	import { links } from '../constants/links';
-	import { hackathons } from '../constants/hackathons';
 	import Hackathons from '$lib/Hackathons.svelte';
+	import Links from '$lib/Links.svelte';
 </script>
 
 <svelte:head>
@@ -17,7 +15,8 @@
 <section class="py-8">
 	<h2 class="font-semibold text-lg text-primary pb-2" id="about-me">About Me</h2>
 	<p class="text-secondary-foreground dark:text-slate-300">
-		I enjoy building websites and applications. Most of my hours are spent on hackathons, always building something.
+		I enjoy building websites and applications. Most of my hours are spent on hackathons, always
+		building something.
 	</p>
 </section>
 <section class="py-8">
@@ -26,29 +25,5 @@
 </section>
 <section class="py-8">
 	<h2 class="font-semibold text-lg text-primary pb-2" id="links">Links</h2>
-	<div class="grid grid-cols-3 gap-y-4">
-		{#each links as link}
-			<div class="col-span-1 text-muted-foreground">{link.platform}</div>
-			<div class="col-span-2 text-secondary-foreground">
-				{#if link.isExternal}
-					<a
-						href={link.href}
-						target="_blank"
-						rel="noopener"
-						class="dark:hover:text-slate-200 dark:text-slate-300 hover:text-slate-500 text-slate-600 transition-colors"
-					>
-						{link.title}
-						<ExternalLinkIcon class="h-4 w-4 mb-0.5 inline" />
-					</a>
-				{:else}
-					<a
-						href={link.href}
-						class="dark:hover:text-slate-200 dark:text-slate-300 hover:text-slate-500 text-slate-600 transition-colors"
-					>
-						{link.title}
-					</a>
-				{/if}
-			</div>
-		{/each}
-	</div>
+	<Links />
 </section>

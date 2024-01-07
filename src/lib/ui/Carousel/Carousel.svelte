@@ -70,13 +70,8 @@
 </script>
 
 <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
-<div
-	class="relative"
-	role="region"
-	aria-roledescription="carousel"
-	on:keydown|preventDefault={onKeyDown}
->
-	<div class={'overflow-hidden'} use:emblaCarouselSvelte={config} on:emblaInit={onInit}>
+<div class="relative" role="region" aria-roledescription="carousel" on:keydown={onKeyDown}>
+	<div class="overflow-hidden" use:emblaCarouselSvelte={config} on:emblaInit={onInit}>
 		<div
 			class={cn(
 				'flex',
@@ -99,35 +94,27 @@
 			{/each}
 		</div>
 	</div>
-	<Button
-		variant="ghost"
-		class={cn(
-			'absolute h-8 w-8 p-0 border-none',
-			config?.options.axis === 'x'
-				? '-left-12 top-1/2 -translate-y-1/2'
-				: '-top-12 left-1/2 -translate-x-1/2 rotate-90'
-		)}
-		disabled={!canScrollPrev}
-		on:click={onPrev}
-	>
-		<ArrowLeft class="h-4 w-4" />
-		<span class="sr-only">Previous slide</span>
-	</Button>
-	<Button
-		variant="ghost"
-		class={cn(
-			'absolute h-8 w-8 p-0 border-none',
-			config?.options.axis === 'x'
-				? '-right-12 top-1/2 -translate-y-1/2'
-				: '-bottom-12 left-1/2 -translate-x-1/2 rotate-90'
-		)}
-		disabled={!canScrollNext}
-		on:click={onNext}
-	>
-		<ArrowRight class="h-4 w-4" />
-		<span class="sr-only">Next slide</span>
-	</Button>
-	<div class="absolute left-1/2 -translate-x-1/2 text-center text-muted-foreground text-sm pt-4">
-		{currentCount} out of {componentProps.length}
+	<div class="flex justify-between py-2">
+		<Button
+			variant="ghost"
+			class={cn(' h-8 w-8 p-0 border-none', config?.options.axis === 'x' ? '' : 'rotate-90')}
+			disabled={!canScrollPrev}
+			on:click={onPrev}
+		>
+			<ArrowLeft class="h-4 w-4" />
+			<span class="sr-only">Previous slide</span>
+		</Button>
+		<span class="text-muted-foreground text-sm h-auto py-2">
+			{currentCount} out of {componentProps.length}
+		</span>
+		<Button
+			variant="ghost"
+			class={cn(' h-8 w-8 p-0 border-none', config?.options.axis === 'x' ? '' : 'rotate-90')}
+			disabled={!canScrollNext}
+			on:click={onNext}
+		>
+			<ArrowRight class="h-4 w-4" />
+			<span class="sr-only">Next slide</span>
+		</Button>
 	</div>
 </div>
