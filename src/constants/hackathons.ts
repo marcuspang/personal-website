@@ -32,7 +32,8 @@ export const hackathons: Hackathon[] = [
 	{
 		projectTitle: 'Zap',
 		hackathonTitle: 'ETH Munich 2023',
-		githubLink: 'https://github.com/marcuspang/we-wallet'
+		githubLink: 'https://github.com/marcuspang/we-wallet',
+		description: 'Won a sponsor prize'
 	},
 	{
 		projectTitle: 'Programmatic NFTs',
@@ -44,7 +45,8 @@ export const hackathons: Hackathon[] = [
 		projectTitle: 'Account Abstraction Builder',
 		hackathonTitle: 'ETHTokyo 2023',
 		githubLink: 'https://github.com/marcuspang/account-abstraction-builder',
-		websiteLink: 'https://account-abstraction-builder.vercel.app'
+		websiteLink: 'https://account-abstraction-builder.vercel.app',
+		description: 'Won some pool prizes'
 	},
 	{
 		projectTitle: 'DevFi',
@@ -68,13 +70,15 @@ export const hackathons: Hackathon[] = [
 		projectTitle: 'DeCoop',
 		hackathonTitle: 'Crypto.com Hackathon 2022',
 		githubLink: 'https://github.com/marcuspang/decoop',
-		websiteLink: 'https://decoop.vercel.app'
+		websiteLink: 'https://decoop.vercel.app',
+		description: 'Won 1st prize'
 	},
 	{
 		projectTitle: 'wentoken',
 		hackathonTitle: 'NUS FinTech Hackathon 2022',
 		githubLink: 'https://github.com/marcuspang/wentoken',
-		websiteLink: 'https://wentoken.vercel.app'
+		websiteLink: 'https://wentoken.vercel.app',
+		description: 'Won 1st prize'
 	},
 	{
 		projectTitle: '101-Daomations',
