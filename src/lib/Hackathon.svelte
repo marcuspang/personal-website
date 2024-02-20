@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { GithubIcon, GlobeIcon } from 'lucide-svelte';
+	import Container from './Container.svelte';
 
 	export let projectTitle: string;
 	export let hackathonTitle: string;
@@ -8,19 +9,19 @@
 	export let websiteLink: string | undefined = undefined;
 </script>
 
-<div class="bg-slate-50 dark:bg-slate-900 py-6 px-8 rounded-lg shadow">
-	<div class="flex justify-between">
+<Container class="h-full">
+	<div class="flex justify-between items-stretch">
 		<div>
-			<h4>
+			<h4 class="text-lg">
 				{projectTitle}
 			</h4>
-			<p class="text-sm text-muted-foreground">built for {hackathonTitle}</p>
+			<p class="text-muted-foreground">{hackathonTitle}</p>
 		</div>
 		<div class="flex">
 			{#if websiteLink !== undefined}
 				<a href={githubLink} target="_blank" rel="noopener">
 					<GlobeIcon
-						class="text-foreground stroke-[1.5px] hover:bg-gray-200 dark:hover:bg-gray-800 p-2 rounded-lg transition-colors"
+						class="text-foreground stroke-[1.5px] hover:bg-gray-200/70 dark:hover:bg-gray-800/70 p-2 rounded-lg transition-colors"
 						size={36}
 					/>
 				</a>
@@ -28,7 +29,7 @@
 			{#if githubLink !== undefined}
 				<a href={githubLink} target="_blank" rel="noopener">
 					<GithubIcon
-						class="text-foreground stroke-[1.5px] hover:bg-gray-200 dark:hover:bg-gray-800 p-2 rounded-lg transition-colors"
+						class="text-foreground stroke-[1.5px] hover:bg-gray-200/70 dark:hover:bg-gray-800/70 p-2 rounded-lg transition-colors"
 						size={36}
 					/>
 				</a>
@@ -36,6 +37,6 @@
 		</div>
 	</div>
 	{#if description !== undefined}
-		<p>{description}</p>
+		<p class="pt-3">{description}</p>
 	{/if}
-</div>
+</Container>

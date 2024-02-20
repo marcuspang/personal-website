@@ -1,13 +1,13 @@
 <script lang="ts">
-	import Hackathon from '$lib/Hackathon.svelte';
 	import { Carousel } from '$lib/ui/Carousel';
-	import { hackathons } from '../constants/hackathons';
 	import Autoplay from 'embla-carousel-autoplay';
+	import Experience from './Experience.svelte';
+	import { experiences } from '../constants/experiences';
 </script>
 
 <Carousel
-	component={Hackathon}
-	componentProps={hackathons}
+	component={Experience}
+	componentProps={experiences}
 	config={{
 		options: { loop: true, axis: 'x' },
 		plugins: [

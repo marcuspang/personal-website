@@ -9,7 +9,10 @@
 
 	export let componentProps: ComponentProps<T>[] = [];
 	export let component: ComponentType<T>;
-	export let config: EmblaCarouselConfig = { options: { loop: true, axis: 'x' }, plugins: [] };
+	export let config: EmblaCarouselConfig = {
+		options: { loop: true, axis: 'x' },
+		plugins: []
+	};
 	export let carouselItemClass = '';
 	export let carouselItemsClass = '';
 
