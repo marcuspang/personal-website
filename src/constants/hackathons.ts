@@ -2,6 +2,13 @@ import type { Hackathon } from '../types';
 
 // Chronological descending order
 export const hackathons: Hackathon[] = [
+  {
+		projectTitle: 'transientoor',
+		hackathonTitle: 'ETH Taipei 2024',
+		githubLink: 'https://github.com/marcuspang/transientoor',
+		websiteLink: 'https://transientoor.vercel.app',
+		description: 'Finalist + Most innovative on OP'
+	},
 	{
 		projectTitle: 'k3ys',
 		hackathonTitle: 'ETH Istanbul 2023',
