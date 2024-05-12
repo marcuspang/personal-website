@@ -10,7 +10,7 @@
 		</div>
 		<div class="col-span-3 text-secondary-foreground sm:pb-0">
 			<div class="space-y-2">
-				<h4 class="leading-4 tracking-tight dark:text-gray-300/90">
+				<h4 class="leading-4 tracking-tight dark:text-gray-300/90 text-black/70">
 					<span>{hackathon.hackathonTitle}</span>
 					<DotIcon class="inline -mx-2" />
 					<span>{hackathon.projectTitle}</span>
