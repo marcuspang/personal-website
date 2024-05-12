@@ -104,10 +104,10 @@
 			disabled={!canScrollPrev}
 			on:click={onPrev}
 		>
-			<ArrowLeft class="h-4 w-4" />
+			<ArrowLeft class="w-4 h-4" />
 			<span class="sr-only">Previous slide</span>
 		</Button>
-		<span class="text-muted-foreground text-sm h-auto py-2">
+		<span class="h-auto py-2 text-sm text-muted-foreground">
 			{currentCount} out of {componentProps.length}
 		</span>
 		<Button
@@ -116,7 +116,7 @@
 			disabled={!canScrollNext}
 			on:click={onNext}
 		>
-			<ArrowRight class="h-4 w-4" />
+			<ArrowRight class="w-4 h-4" />
 			<span class="sr-only">Next slide</span>
 		</Button>
 	</div>
