@@ -1,102 +1,129 @@
 import type { Hackathon } from '../types';
 
-// Chronological descending order
 export const hackathons: Hackathon[] = [
-  {
+	{
 		projectTitle: 'transientoor',
 		hackathonTitle: 'ETH Taipei 2024',
 		githubLink: 'https://github.com/marcuspang/transientoor',
 		websiteLink: 'https://transientoor.vercel.app',
-		description: 'Finalist + Most innovative on OP'
+		description:
+			'Won top place, along with a sponsor prize: Most Innovative on OP.\nMade use of transient opcodes to create a Chrome extension to allow users to approve + swap in one transaction. Also made a custom ERC721 standard to allow loans without escrows.',
+		duration: 'Apr 2024'
 	},
 	{
 		projectTitle: 'k3ys',
 		hackathonTitle: 'ETH Istanbul 2023',
 		githubLink: 'https://github.com/keys-connect/app',
 		websiteLink: 'https://k3ys.xyz',
-		description: 'Won several pool prizes'
+		description:
+			'Won several pool prizes.\nDrag and drop interface to create airdrop campaign rules, and encode the logic on-chain. Allows for verifiability and ensures that rules only apply at the specified snapshot, without possibility of tampering.',
+		duration: 'Nov 2023'
 	},
 	{
 		projectTitle: 'Reco',
 		hackathonTitle: 'ETH London 2023',
 		githubLink: 'https://github.com/recommendoor/reco',
 		websiteLink: 'https://reco-london.vercel.app',
-		description: 'Won a sponsor prize'
+		description:
+			'Won a sponsor prize.\nBuilt a decentralized recommendation engine on Discord for communities, e.g. DAOs.',
+		duration: 'Oct 2023'
 	},
 	{
 		projectTitle: 'CredLancer',
 		hackathonTitle: 'ETH Rome 2023',
 		githubLink: 'https://github.com/CredLancer/CredLancer_ALL',
-		description: 'Won a sponsor prize'
+		description:
+			'Won a sponsor prize.\nImplement privacy-preserving features for a freelancer dApp.',
+		duration: 'Oct 2023'
 	},
 	{
 		projectTitle: 'DashDAO',
 		hackathonTitle: 'ETH Warsaw 2023',
 		githubLink: 'https://github.com/DashDAO/dao-dashboard',
 		websiteLink: 'https://dashdao.vercel.app',
-		description: 'Won 1st place'
+		description:
+			'Won 1st place.\nBuilt a dashboard for DAOs to view more detailed proposal analytics and voting history, across delegations.',
+		duration: 'Sep 2023'
 	},
 	{
 		projectTitle: 'Zap',
 		hackathonTitle: 'ETH Munich 2023',
 		githubLink: 'https://github.com/marcuspang/we-wallet',
-		description: 'Won a sponsor prize'
+		description: 'Won a sponsor prize.\nFork of wallet for Bitcoin Lightning network.',
+		duration: 'Aug 2023'
 	},
 	{
 		projectTitle: 'Programmatic NFTs',
 		hackathonTitle: 'Web3 Gaming Week 2023',
 		githubLink: 'https://github.com/marcuspang/programmatic-nfts',
-		websiteLink: 'https://programmatic-nfts.vercel.app'
+		websiteLink: 'https://programmatic-nfts.vercel.app',
+		duration: 'Jul 2023',
+		description: 'Introduced new ERC6551 standard to allow for modifiable NFT metadata on-chain.'
 	},
 	{
 		projectTitle: 'Account Abstraction Builder',
 		hackathonTitle: 'ETHTokyo 2023',
 		githubLink: 'https://github.com/marcuspang/account-abstraction-builder',
 		websiteLink: 'https://account-abstraction-builder.vercel.app',
-		description: 'Won some pool prizes'
+		description:
+			'Won some pool prizes.\nDrag and drop interface to create account abstraction rules, and bundles them into a Chrome extension.',
+		duration: 'Apr 2023'
 	},
 	{
 		projectTitle: 'DevFi',
 		hackathonTitle: 'Solana Grizzlython 2023',
 		githubLink: 'https://github.com/solana-devfi',
-		websiteLink: 'https://devfi-protocol.netlify.app'
+		// websiteLink: 'https://devfi-protocol.netlify.app',
+		duration: 'Mar 2023',
+		description: 'Bounty system for open-source projects on GitHub without prior wallet setup.'
 	},
 	{
 		projectTitle: 'BountiFi',
 		hackathonTitle: 'dotGlobal Polkadot Hackathon 2023',
 		githubLink: 'https://github.com/polkadot-bountifi',
-		websiteLink: 'https://bountifi.netlify.app'
+		// websiteLink: 'https://bountifi.netlify.app',
+		duration: 'Mar 2023',
+		description: 'Bounty system for artists.'
 	},
 	{
 		projectTitle: 'Alfred Protocol',
 		hackathonTitle: 'Polygon @ the Pit 2023',
 		githubLink: 'https://github.com/Alfred-Protocol',
-		websiteLink: 'https://polygon-savings-rate.netlify.app'
+		// websiteLink: 'https://polygon-savings-rate.netlify.app',
+		duration: 'Feb 2023',
+		description: 'Platform to entrust funds with fund managers, trading on UniswapV3 positions'
 	},
 	{
 		projectTitle: 'DeCoop',
 		hackathonTitle: 'Crypto.com Hackathon 2022',
 		githubLink: 'https://github.com/marcuspang/decoop',
 		websiteLink: 'https://decoop.vercel.app',
-		description: 'Won 1st prize'
+		description:
+			'Won 1st prize.\nLending pools for micro-finance use-cases, built a Telegram bot + custom dApp to handle repayments.',
+		duration: 'Oct 2022'
 	},
 	{
 		projectTitle: 'wentoken',
 		hackathonTitle: 'NUS FinTech Hackathon 2022',
 		githubLink: 'https://github.com/marcuspang/wentoken',
 		websiteLink: 'https://wentoken.vercel.app',
-		description: 'Won 1st prize'
+		description: 'Won 1st prize.\nTCG-style NFT marketplace.',
+		duration: 'Sep 2022'
 	},
 	{
 		projectTitle: '101-Daomations',
 		hackathonTitle: 'Hack and Roll 2022',
 		githubLink: 'https://github.com/tanyonghe/101-DAOmatians',
-		websiteLink: 'https://101-daomatians.vercel.app'
+		websiteLink: 'https://101-daomatians.vercel.app',
+		duration: 'Jan 2022',
+		description: 'DAO analytics tool built with Snapshot.'
 	},
 	{
 		projectTitle: 'Learn Together',
 		hackathonTitle: 'LifeHack 2021',
 		githubLink: 'https://github.com/mazx4960/learntogether',
-		websiteLink: 'https://learntogether2021.herokuapp.com'
+		// websiteLink: 'https://learntogether2021.herokuapp.com',
+		duration: 'Mar 2022',
+		description: 'Social platform for online courses.'
 	}
 ];
