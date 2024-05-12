@@ -11,4 +11,5 @@ export interface Hackathon {
 	description?: string;
 	githubLink?: string;
 	websiteLink?: string;
+	duration: string;
 }
