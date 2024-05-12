@@ -18,12 +18,18 @@
 	}
 </script>
 
-<header class="bg-transparent mb-4">
-	<div class="flex justify-between max-w-xl mx-auto py-2">
+<header class="mb-4 bg-transparent">
+	<div class="flex justify-between max-w-xl py-2 mx-auto">
 		<a href="/" class="flex items-center">
-			<Logo class="w-10 h-10 hover:opacity-80 transition-opacity" />
+			<Logo class="w-10 h-10 transition-opacity hover:opacity-80" />
 		</a>
-		<div class="flex space-x-2">
+		<div class="flex items-center space-x-2">
+			<div class="space-x-3 text-sm">
+				<a href="#about-me" class="hover:underline">About Me</a>
+				<a href="#experience" class="hover:underline">Experience</a>
+				<a href="#past-hackathons" class="hover:underline">Hackathons</a>
+				<a href="#links" class="hover:underline">Links</a>
+			</div>
 			<ThemeToggle />
 			<!-- {#if $page.data.session}
 				{#if $page.data.session.user?.image}
@@ -31,7 +37,7 @@
 						<AvatarImage
 							src={$page.data.session.user.image}
 							alt={$page.data.session.user?.email ?? $page.data.session.user?.name}
-							class="hover:opacity-80 transition-opacity"
+							class="transition-opacity hover:opacity-80"
 						/>
 						<AvatarFallback>PFP</AvatarFallback>
 					</Avatar>

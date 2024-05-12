@@ -21,7 +21,7 @@
 	</p>
 </section>
 <section class="py-8">
-	<h2 class="pb-3 text-xl font-bold tracking-tight text-primary" id="past-hackathons">
+	<h2 class="pb-3 text-xl font-bold tracking-tight text-primary" id="experience">
 		Work Experience
 	</h2>
 	<Experiences />
