@@ -24,7 +24,7 @@
 			<Logo class="w-10 h-10 transition-opacity hover:opacity-80" />
 		</a>
 		<div class="flex items-center space-x-2">
-			<div class="space-x-3 text-sm">
+			<div class="hidden space-x-3 text-sm md:block">
 				<a href="#about-me" class="hover:underline">About Me</a>
 				<a href="#experience" class="hover:underline">Experience</a>
 				<a href="#past-hackathons" class="hover:underline">Hackathons</a>
