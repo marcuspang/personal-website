@@ -7,7 +7,7 @@ export const hackathons: Hackathon[] = [
 		githubLink: 'https://github.com/marcuspang/transientoor',
 		websiteLink: 'https://transientoor.vercel.app',
 		description:
-			'Won top place, along with a sponsor prize: Most Innovative on OP.\nMade use of transient opcodes to create a Chrome extension to allow users to approve + swap in one transaction. Also made a custom ERC721 standard to allow loans without escrows.',
+			'Won first place, along with a sponsor prize: Most Innovative on OP.\nMade use of transient opcodes to create a Chrome extension to allow users to approve + swap in one transaction. Also made a custom ERC721 standard to allow loans without escrows.',
 		duration: 'Apr 2024'
 	},
 	{
