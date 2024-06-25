@@ -1,6 +1,12 @@
 export const experiences = [
 	{
 		role: 'Software Engineer Intern',
+		company: 'Nethermind',
+		description: '',
+		duration: 'Jun 2024 - Sep 2024'
+	},
+	{
+		role: 'Software Engineer Intern',
 		company: 'Cliniserve GmbH',
 		description: 'Built new API and worked on mobile apps, frontend apps, and backend services.',
 		duration: 'Jul 2023 - Dec 2023'
