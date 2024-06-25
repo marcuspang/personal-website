@@ -2,12 +2,23 @@
 	import Experiences from '$lib/Experiences.svelte';
 	import Hackathons from '$lib/Hackathons.svelte';
 	import Links from '$lib/Links.svelte';
+	import { MetaTags } from 'svelte-meta-tags';
 </script>
 
-<svelte:head>
-	<title>Marcus Pang</title>
-	<meta name="description" content="marcuspang.me" />
-</svelte:head>
+<MetaTags
+	title="Marcus Pang | Fullstack + Smart Contract Developer"
+	description="I enjoy building websites and applications. Most of my hours are spent on hackathons, and I'm
+		always building something. I'm currently working at Nethermind."
+	canonical="https://marcuspang.me/"
+	twitter={{
+		handle: '@marcuspangeth',
+		site: '@marcuspangeth',
+		cardType: 'summary_large_image',
+		title: 'Marcus Pang | Fullstack + Smart Contract Developer',
+		description:
+			"I enjoy building websites and applications. Most of my hours are spent on hackathons, and I'm always building something. I'm currently working at Nethermind."
+	}}
+/>
 
 <section class="py-8">
 	<h1 class="pb-1 text-3xl font-semibold tracking-tight text-primary">Marcus Pang</h1>
