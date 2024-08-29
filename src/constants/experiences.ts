@@ -1,7 +1,7 @@
 export const experiences = [
 	{
-		role: 'Software Engineer Intern',
-		company: 'ByteDance - Global Payments team',
+		role: 'Software Engineer Intern, Global Payments',
+		company: 'ByteDance',
 		description: '',
 		duration: 'Aug 2024 - Nov 2024'
 	},
@@ -18,8 +18,8 @@ export const experiences = [
 		duration: 'Jul 2023 - Dec 2023'
 	},
 	{
-		role: 'Software Engineer Intern',
-		company: 'ByteDance - Engineering Productivity team',
+		role: 'Software Engineer Intern, Engineering Productivity',
+		company: 'ByteDance',
 		description: 'Created new microservice for internal projects.',
 		duration: 'Dec 2022 - Apr 2023'
 	},
