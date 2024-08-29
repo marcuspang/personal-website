@@ -1,8 +1,14 @@
 export const experiences = [
 	{
 		role: 'Software Engineer Intern',
-		company: 'Nethermind',
+		company: 'ByteDance - Global Payments team',
 		description: '',
+		duration: 'Aug 2024 - Nov 2024'
+	},
+  {
+		role: 'Software Engineer Intern',
+		company: 'Nethermind',
+		description: 'Worked on Verkle Trie migration for mainnet execution client, mainly diagnostic work. Helped with Cairo Native integration for Starknet execution client, also tried to run Cairo files in Risc0.',
 		duration: 'Jun 2024 - Sep 2024'
 	},
 	{
@@ -13,7 +19,7 @@ export const experiences = [
 	},
 	{
 		role: 'Software Engineer Intern',
-		company: 'ByteDance',
+		company: 'ByteDance - Engineering Productivity team',
 		description: 'Created new microservice for internal projects.',
 		duration: 'Dec 2022 - Apr 2023'
 	},
