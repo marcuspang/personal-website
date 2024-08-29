@@ -1,18 +1,27 @@
 import type { Hackathon } from '../types';
 
 export const hackathons: Hackathon[] = [
+  {
+		projectTitle: 'Piggy Wallet',
+		hackathonTitle: 'ETHGlobal Brussles 2024',
+		githubLink: 'https://github.com/marcuspang/piggy-wallet',
+		websiteLink: 'https://ethglobal.com/showcase/piggy-wallet-szyeh',
+		description:
+			'Won top place, along with several sponsor prizes.\nWallet app that uses Safe\'s Smart Account and Rhinestone modules to provide a "plugin" wallet experience.',
+		duration: 'Jul 2024'
+  },
 	{
 		projectTitle: 'transientoor',
 		hackathonTitle: 'ETH Taipei 2024',
 		githubLink: 'https://github.com/marcuspang/transientoor',
 		websiteLink: 'https://transientoor.vercel.app',
 		description:
-			'Won first place, along with a sponsor prize: Most Innovative on OP.\nMade use of transient opcodes to create a Chrome extension to allow users to approve + swap in one transaction. Also made a custom ERC721 standard to allow loans without escrows.',
+			'Won top place, along with a sponsor prize: Most Innovative on OP.\nMade use of transient opcodes to create a Chrome extension to allow users to approve + swap in one transaction. Also made a custom ERC721 standard to allow loans without escrows.',
 		duration: 'Apr 2024'
 	},
 	{
 		projectTitle: 'k3ys',
-		hackathonTitle: 'ETH Istanbul 2023',
+		hackathonTitle: 'ETHGlobal Istanbul 2023',
 		githubLink: 'https://github.com/keys-connect/app',
 		websiteLink: 'https://k3ys.xyz',
 		description:
@@ -62,7 +71,7 @@ export const hackathons: Hackathon[] = [
 	},
 	{
 		projectTitle: 'Account Abstraction Builder',
-		hackathonTitle: 'ETHTokyo 2023',
+		hackathonTitle: 'ETHGlobal Tokyo 2023',
 		githubLink: 'https://github.com/marcuspang/account-abstraction-builder',
 		websiteLink: 'https://account-abstraction-builder.vercel.app',
 		description:
