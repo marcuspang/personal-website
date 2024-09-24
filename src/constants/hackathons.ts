@@ -2,6 +2,13 @@ import type { Hackathon } from '../types';
 
 export const hackathons: Hackathon[] = [
   {
+    projectTitle: 'Dark Pools on MINA',
+    hackathonTitle: 'ETHGlobal Singapore 2024',
+    githubLink: 'https://github.com/marcuspang/mind-dark-pools',
+    description: "Won 3rd prize for MINA's Protokit prize.\nSimple Dark Pool built on MINA where order matching is private and done on sequencer level. Also added some custom expiration / execution delay logic for new orders to allow for more flexibility",
+    duration: 'Sep 2024'
+  },
+  {
 		projectTitle: 'Piggy Wallet',
 		hackathonTitle: 'ETHGlobal Brussles 2024',
 		githubLink: 'https://github.com/marcuspang/piggy-wallet',
