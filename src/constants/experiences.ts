@@ -3,7 +3,7 @@ export const experiences = [
 		role: 'Software Engineer Intern, Global Payments',
 		company: 'ByteDance',
 		description: '',
-		duration: 'Aug 2024 - Nov 2024'
+		duration: 'Sep 2024 - Nov 2024'
 	},
   {
 		role: 'Software Engineer Intern',
