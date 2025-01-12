@@ -1,8 +1,14 @@
 export const experiences = [
+  {
+    role: "Engineer, Monad Foundation",
+    company: "Monad Foundation",
+    description: "Provide ecosystem teams with tooling to accelerate their growth, and provide technical support for non-technical teams",
+    duration: "Jan 2025 - Present"
+  },
 	{
 		role: 'Software Engineer Intern, Global Payments',
 		company: 'ByteDance',
-		description: '',
+		description: 'Maintained internal platform that manages payment channels in ByteDance, addressing requirements from several cross-functional teams.',
 		duration: 'Sep 2024 - Nov 2024'
 	},
   {
