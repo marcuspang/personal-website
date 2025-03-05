@@ -6,17 +6,17 @@
 </script>
 
 <MetaTags
-	title="Marcus Pang | Fullstack + Smart Contract Developer"
+	title="Marcus Pang | Engineer @ Monad Foundation"
 	description="I enjoy building websites and applications. Most of my hours are spent on hackathons, and I'm
-		always building something. I'm currently working at Nethermind."
+		always building something."
 	canonical="https://marcuspang.me/"
 	twitter={{
 		handle: '@marcuspangeth',
 		site: '@marcuspangeth',
 		cardType: 'summary_large_image',
-		title: 'Marcus Pang | Fullstack + Smart Contract Developer',
+		title: 'Marcus Pang | Engineer @ Monad Foundation',
 		description:
-			"I enjoy building websites and applications. Most of my hours are spent on hackathons, and I'm always building something. I'm currently working at Nethermind."
+			"I enjoy building websites and applications. Most of my hours are spent on hackathons, and I'm always building something."
 	}}
 />
 
