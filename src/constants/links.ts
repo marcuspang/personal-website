@@ -10,7 +10,7 @@ export const links: CustomLink[] = [
 	{
 		platform: 'ENS',
 		title: 'marcuspang.eth',
-		href: 'https://etherscan.io/address/0x7730B4Cdc1B1E7a33A309AB7205411faD009C106',
+		href: 'https://etherscan.io/address/marcuspang.eth',
 		isExternal: true
 	},
 	{
