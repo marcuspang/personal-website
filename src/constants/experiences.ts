@@ -1,8 +1,8 @@
 export const experiences = [
   {
-    role: "Engineer, Monad Foundation",
+    role: "Software Engineer, Monad Foundation",
     company: "Monad Foundation",
-    description: "Provide ecosystem teams with tooling to accelerate their growth, and provide technical support for non-technical teams",
+    description: "Built Faucet, Monad Cards, Claim Portal and some internal tools",
     duration: "Jan 2025 - Present"
   },
 	{
