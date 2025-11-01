@@ -16,7 +16,7 @@
 					<span>{hackathon.projectTitle}</span>
 				</h4>
 				{#if hackathon.description !== undefined}
-					<p class="text-[15px] dark:text-gray-300/70 !mt-1 whitespace-pre-line">
+					<p class="text-[15px] dark:text-gray-300/70 mt-1! whitespace-pre-line">
 						{hackathon.description}
 					</p>
 				{/if}
